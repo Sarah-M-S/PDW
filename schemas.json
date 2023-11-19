@@ -1,0 +1,48 @@
+{
+    "Books":{
+        "type": "object",
+        "properties":{
+            "title": {
+                "type": "string"
+            },
+            "author": {"type": "string"},
+            "category": {"type":"string"},
+            "price": {"type": "number"},
+            "sinopse":{"type": "string"},
+            "status":{"type": "boolean"},
+            "date":{"type": "string"},
+            "edition": {"type": "string"},
+            "idSalesPerson": {"type":"string"}
+        }
+    },
+    "Category":{
+        "type": "object",
+        "properties":{
+            "categoryName": {"type":"string"},
+            "categoryDescription":{"type": "string"},
+            "status":{"type": "boolean"}
+        }
+    },
+    "Transaction":{
+        "type": "object",
+        "properties":{
+            "buyerId":{"type": "string"},
+            "sellerId":{"type": "string"},
+            "itemId":{"type": "string"},
+            "date":{"type": "string"},
+            "status":{"type":"boolean"}
+        }
+    },
+    "User":{
+        "type": "object",
+        "properties":{
+            "name":{"type":"string"},
+            "email":{"type": "string"},
+            "password":{"type": "string"},
+            "status":{"type": "boolean"},
+            "type":{"type": "string"},
+            "transaction":{"type":"string"}
+        }
+    }
+
+}
