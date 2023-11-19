@@ -2,29 +2,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
-const swaggerUI = require('swagger-ui-express');
-const swaggerJsDoc = require('swagger-jsdoc');
 
 const app = express();
-
-let swaggerDefinition = {
-    info: {
-        title: "Contos da Ada API",
-        version: "1.0.0",
-        description: "API construída para a disciplina de Programação Dinâmica para Web"
-    },
-    components: {
-        schemas: require("./schemas.json")
-    }
-}
-
-var options = {
-    swaggerDefinition: swaggerDefinition,
-    apis: ['./routes/*.js']
-}
-
-var swaggerSpec = swaggerJsDoc(options);
-app.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 
 
 

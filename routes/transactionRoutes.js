@@ -5,39 +5,6 @@ const mongoose = require('mongoose');
 const Transaction = require('../model/Transaction')
 const User = require('../model/User')
 
-module.exports = router =>{
-    /**
-     * @swagger
-     * /transaction
-     *  post:
-     *      tags:
-     *        - Transaction
-     *         description: Adicionar nova transação
-     *         produces: 
-     *          -application/json
-     *      responses:
-     *          404:
-     *              description: Vendedor não encontrado
-     *              schema:
-     *                 $ref: '#/components/schemas/Transaction'
-     *          404:
-     *              description: Comprador não encontrado
-     *               schema:
-     *                 $ref: '#/components/schemas/Transaction'
-     *          201:
-     *              description: Transação criada com sucesso
-     *              schema:
-     *                 $ref: '#/components/schemas/Transaction'
-     *           500:
-     *               description: Erro interno do servidor
-     *               schema:
-     *                  $ref: #components/schemas/Transaction
-     *              
-     * 
-     */
-}
-
-
 
 // Registrar nova transação
 router.post('/transaction', async (req, res) => {
